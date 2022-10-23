@@ -12,4 +12,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print
-        run:  cat README.md
+        run:  ls

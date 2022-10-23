@@ -15,6 +15,6 @@ jobs:
       
     steps:
       - uses: actions/checkout@main
-      - name: print
-        run:  ls -R
+      - name: requirements file install
+        run:  pip3 install -r ./mock_server/requirements.txt
 

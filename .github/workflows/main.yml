@@ -11,9 +11,5 @@ jobs:
   job-name:
     runs-on: ubuntu-latest
     steps:
-      - name: docker pull
-        run:  docker pull digitalocean/flask-helloworld
-      - name: docker run
-        run:  docker run -d -p5000:5000 digitalocean/flask-helloworld
-      - name: Get from service-1
-        run:  curl -X GET "http://127.0.0.1:5000/"
+      - name: print
+        run:  cat README.md

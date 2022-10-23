@@ -16,7 +16,5 @@ jobs:
     steps:
       - uses: actions/checkout@main
       - name: print
-        run:  ls
-        working-directory: $((env.working-directory))
-      - name: print
         run:  ls - R
+

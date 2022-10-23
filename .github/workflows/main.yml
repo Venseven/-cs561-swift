@@ -18,7 +18,7 @@ jobs:
       - name: requirements file install
         run:  |
           pip3 install -r ./mock_server/requirements.txt
-          uvicorn main:app --reload
+          uvicorn main:app --reload&
           
       - name: curl
         run:  |

@@ -19,4 +19,4 @@ jobs:
     steps:
       - name: Get from service-1
         run: |
-          curl -X GET "http://localhost:8081/data/2.5/weather?lat=44.56&lon=123.26&appid=d8310c9fbcfaee650d22017af646e00" | jq
+          curl www.google.com

@@ -23,5 +23,13 @@ jobs:
       - name: curl
         run:  |
            curl "http://127.0.0.1:8000/data/2.5/weather?lat=44.56&lon=123.26&appid=d8310c9fbcfaee650d22017af4646e00"
-          
+  build:
+    runs-on: macos-latest
+    
+    steps:
+    - uses: actions/checkout@main
+    - name: build test
+      run: swift build -v
+    - name: Run tests
+      run: swift test -v
 

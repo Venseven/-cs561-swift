@@ -1,4 +1,4 @@
-name: workflow-name
+name: Testing workflow
 on: 
   push:
     branches:
@@ -8,7 +8,7 @@ on:
       - main
 
 jobs:
-  job-name:
+  swift-test-mock:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@main

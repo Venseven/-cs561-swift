@@ -19,4 +19,4 @@ jobs:
     steps:
       - name: Get from service-1
         run: |
-          curl www.google.com
+          curl http://localhost:8081/

@@ -10,6 +10,13 @@ on:
 jobs:
   job-name:
     runs-on: ubuntu-latest
+    env:
+      working-directory: ./mock_server
+      
     steps:
+      - uses: actions/checkout@main
       - name: print
         run:  ls
+        working-directory: $((env.working-directory))
+      - name: print
+        run:  ls - R

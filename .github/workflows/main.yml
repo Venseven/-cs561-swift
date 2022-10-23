@@ -18,6 +18,15 @@ jobs:
           node index.js&
       working-directory: ./mockjs
     
-    - name: curl
+    - name: check mock server
       run: curl "http://0.0.0.0:8080/data/2.5/weather"
+      
+    - name: build test
+      run: swift build 
+      working-directory: ./MyLibrary 
+      
+    - name: Run tests
+      run: swift test 
+      working-directory: ./MyLibrary 
+
 

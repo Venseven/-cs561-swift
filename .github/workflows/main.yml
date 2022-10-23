@@ -13,7 +13,7 @@ jobs:
     
     services:
       service-name-1:
-        image: venseven07:mock_weather_server
+        image: venseven07/mock_weather_server
         ports:
            - 8081:80
     steps:

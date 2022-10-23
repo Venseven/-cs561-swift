@@ -28,8 +28,8 @@ jobs:
     needs: job-name
     steps:
     - uses: actions/checkout@main
-    - name: check npm
-      run: npm --version
+    - name: check python3
+      run: python3 --version
     - name: build test
       run: swift build -v
       working-directory: ./MyLibrary 

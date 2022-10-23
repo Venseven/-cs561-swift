@@ -11,15 +11,11 @@ jobs:
   job-name:
     runs-on: ubuntu-latest
     
-    # services:
-    #   service-name-1:
-    #     image: venseven07/mock_weather_server
-    #     ports:
-    #        - 80:80
+    services:
+      service-name-1:
+        image: venseven07/mock_weather_server
+        ports:
+           - 80:80
     steps:
-      - name: build docker
-        run: docker pull venseven07/mock_weather_server
-      - name: run docker 
-        run: docker run -d -p8081:80 venseven07/mock_weather_server
       - name: Get from service-1
-        run: curl "http://127.0.0.1:8081/data/2.5/weather?lat=44.56&lon=123.26&appid=d8310c9fbcfaee650d22017af4646e00"
+        run: curl "http://127.0.0.1:80/data/2.5/weather?lat=44.56&lon=123.26&appid=d8310c9fbcfaee650d22017af4646e00"

@@ -30,6 +30,8 @@ jobs:
     - uses: actions/checkout@main
     - name: build test
       run: swift build -v
+      working-directory: ./MyLibrary 
     - name: Run tests
       run: swift test -v
+      working-directory: ./MyLibrary 
 

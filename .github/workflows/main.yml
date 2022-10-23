@@ -13,11 +13,11 @@ jobs:
     steps:
     - uses: actions/checkout@main
     - name: requirements file install
-      run:  |
+      run:  
           npm install express
           node index.js&
       working-directory: ./mockjs
     
     - name: curl
-      run: curl "http://0.0.0.0:8000/data/2.5/weather"
+      run: curl "http://0.0.0.0:8080/data/2.5/weather"
 

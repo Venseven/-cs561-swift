@@ -13,9 +13,9 @@ jobs:
     
     services:
       service-name-1:
-        image: venseven07/mock_weather_server
+        image: digitalocean/flask-helloworld
         ports:
-           - 8080:80
+           - 5000:5000
     steps:
       - name: Get from service-1
-        run: curl -L "http://0.0.0.0:8080/data/2.5/weather?lat=&lon=123.26&appid=d8310c9fbcfaee650d22017af4646e00"
+        run: curl "http://0.0.0.0:5000/"

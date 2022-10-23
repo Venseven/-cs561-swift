@@ -18,5 +18,4 @@ jobs:
            - 8081:80
     steps:
       - name: Get from service-1
-        run: |
-          curl http://localhost:8081/
+        run: "curl http://localhost:8081/"

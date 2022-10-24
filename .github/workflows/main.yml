@@ -1,0 +1,32 @@
+name: Testing workflow
+on: 
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  swift-test-mock:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@main
+    - name: requirements file install
+      run:  |
+          npm install express
+          node index.js&
+      working-directory: ./mockjs
+    
+    - name: check mock server
+      run: curl "http://0.0.0.0:8080/data/2.5/weather"
+      
+    - name: build test
+      run: swift build 
+      working-directory: ./MyLibrary 
+      
+    - name: Run tests
+      run: swift test 
+      working-directory: ./MyLibrary 
+
+
